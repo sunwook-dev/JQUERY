@@ -14,8 +14,8 @@
         $('#scoreList li').each(function (index, item) {
 
           //$(item) or $(this) 둘다가능            
-          const score = parseInt($(this).data('score')); // data-score 값을 정수로 변환,스트링이기 때문에
-
+          const score = parseInt($(this).data('score')); // parseInt : data-score 값을 정수로 변환,스트링이기 때문에
+                                                        //this는 현재 li 요소를 가리킴
           if (score >= 80) {
             $(this).css('color', 'blue'); // 텍스트 색을 파란색으로 변경
           }

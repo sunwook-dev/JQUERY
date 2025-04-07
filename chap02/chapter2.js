@@ -2,10 +2,10 @@ $(function() {
   $('#selected-plays > li').addClass('horizontal'); //id가 selected-plays인 li에 horizontal 클래스 추가
   $('li:not(.horizontal)').addClass('sub-level');
 
-  $('a[href $= pdf]').addClass('pdflink');
-  $('a[href ^= mailto]').addClass('mailto');
+  $('a[href $= pdf]').addClass('pdflink');  //a태그의 href 속성값이 pdf로 끝나는 경우 pdflink 클래스 추가
+  $('a[href ^= mailto]').addClass('mailto');  //a태그의 href 속성값이 mailto로 시작하는 경우 mailto 클래스 추가
   
-  $('a[href *= henry]').not('.mailto').addClass('henrylink');
+  $('a[href *= henry]').not('.mailto').addClass('henrylink');   //a태그의 href 속성값에 henry가 포함된 경우 henrylink 클래스 추가, 단 mailto 클래스는 제외
 
   //$('tr:odd').addclass('alt');  //짝수번째 tr에 alt클래스 추가
   //$('tr:nth-child(odd)').addclass('alt'); //홀수번째 tr에 alt클래스 추가
