@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 변수를 선언합니다.
+            var array = [
+                { name: 'Hanbit Media', link: 'http://hanbit.co.kr' },
+                { name: 'Naver', link: 'http://naver.com' },
+                { name: 'Daum', link: 'http://daum.net' }
+            ];
+            //중요!!!!!
+            // $.each() 메서드를 사용합니다. => $. 은 제이쿼리의 전역함수를 말한다.
+            // 배열에 있는 각각의 요소에 작업을 해야할 때 사용합니다.
+            //<a href="http://hanbit.co.kr">Hanbit Media</a>
+            //위와 같이 a태그를 각각 생성하려고 할떄 사용함
+            let output = '';
+
+            //방법1
+            const arr2 = $.map(array, function(item, index) {
+               if(item.name == 'Daum') {
+                    return item;
+               }
+            });
+
+            //방법2 (each를 더 많이 사용함)
+            $.each(array, function (index, item) {
+                output += '<a href="' + item.link + '">' + item.name + '</a><br/>';
+            });
+
+            $('body').html(output); //body 태그에 html() 메서드를 사용하여 내용을 삽입합니다.
+            
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
