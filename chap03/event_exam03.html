@@ -3,7 +3,22 @@
 <head>
     <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
-       
+        //prop('checked', true/false); 체크박스의 체크 상태를 true/false로 설정
+       $(function() {
+        $('#all-check').change(function(){
+            if(this.checked) {
+                
+                //방법1 : attr사용                
+                //$('#check-item :checkbox').attr('checked', true); // 체크박스의 체크 상태를 true로 설정
+                
+                //방법2 : prop사용
+                $('#check-item :checkbox').prop('checked', true);
+            }else {
+                //$('#check-item :checkbox').attr('checked', false); // 체크박스의 체크 상태를 false로 설정
+                $('#check-item :checkbox').prop('checked', false);
+            }                        
+        })
+       })                
     </script>
 </head>
 <body>

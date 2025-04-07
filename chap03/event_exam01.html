@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        // 무한 스크롤 부분
+        $(document).ready(function () {
+            // 스크롤 이벤트 발생 시
+            $(window).scroll(function () {
+               const scrollHeight = $(window).height() + $(window).scrollTop(); // 현재 스크롤 위치
+               const documentHeight = $(document).height(); // 문서 전체 높이
+
+               console.log(scrollHeight); 
+               console.log(documentHeight);
+
+               if(Math.floor(scrollHeight) + 500 > documentHeight) { // 스크롤이 문서의 끝에 도달했을 때
+                   for (var i = 0; i < 50; i++) {
+                       $('<h1>Infinity Scroll</h1>').appendTo('body'); // 새로운 요소 추가(50개)
+                   }
+               }
+                
+            });
+        });
+
+        // 테스트를 위해 내부에 공간을 채워둡니다.
+        $(document).ready(function () {
+            for (var i = 0; i < 20; i++) {
+                $('<h1>Infinity Scroll</h1>').appendTo('body');
+            }
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

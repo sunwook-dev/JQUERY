@@ -5,7 +5,19 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
-	
+	$(function() {
+		$('button').click(function() {
+
+			//동적 요소 생성 : 버튼을 클릭할 때마다 새로운 div 요소 생성
+			$('body').append('<div>Hello jQuery' + $('div').size() + 'th</div>');
+		});
+		
+		// 이벤트 위임 : 기존에 존재하던 div 뿐만 아니라, 추가로 생성된 div에도 이벤트를 적용
+		$('body').on('click', 'div', function() { 	
+			alert($(this).html());
+		});
+
+	});	
 </script>
 </head>
 <body>
