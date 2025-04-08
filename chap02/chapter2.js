@@ -9,7 +9,7 @@ $(function() {
 
   //$('tr:odd').addclass('alt');  //짝수번째 tr에 alt클래스 추가
   //$('tr:nth-child(odd)').addclass('alt'); //홀수번째 tr에 alt클래스 추가
-  $('tr').filter(':odd').addClass('alt'); //홀수번째 tr에 alt클래스 추가
+  $('tr').filter(':odd').addClass('alt'); //홀수번째(인덱스) tr에 alt클래스 추가
 
   //$('td:contains(Henry)').addClass('hightlight'); //td에 henry가 포함된 td에 highlight 클래스 추가
   //$('td:contains(Henry)').nextAll().andSelf().addClass('highlight');

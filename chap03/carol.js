@@ -198,6 +198,6 @@ $(function () {
   $('#switcher-large, #switcher-narrow').click(function () {
     $('#switcher').off('click.kosa');  //버튼 클릭시 이벤트 해제
   });
-
+  
   $('#switcher').trigger('click.kosa');  //이벤트 발생
 });
